@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    min-height: 100vh;     
+    height: 100vh;            
+}
+
+/* Código para el modal que abre al presionar el botón de agregar*/
+ .ver{
+    display: none;
+    justify-content: start;
+    align-items: self-end;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition-duration: 5s;
+    z-index: 10;
+    margin-top: 0;
+    background-color: #ffffffea;
+}
+.opaco{
+    display: block;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    background-color: #fff;
+    width: 90%;
+    height: 100%;
+    opacity: 1;
+    position: relative;
+    border-radius: 20px 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 50px 1px #91cdc7;
+}
+.general{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: 10px  auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #d4dbddb2;
+    border: none;
+}
+.descripcion{
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 10px  auto;
+}
+.formulario{
+    padding: 20px;
+    background-color: #ffffff69;
+    width: 100%;
+    height: 90%;
+}
+.btn-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7ac11;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+.btn_form:hover{
+    background-color: #002832;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 1px 1px 15px 3px #91cdc7;
+}
+.nuevo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #005E76;
+    text-align: center;
+    opacity: 1;
+    color: #fff;
+}
+.close_modal{
+    background-color: #005E76;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 10%;
+    padding: 8px;
+}
+.close_modal > h1{
+    background-color: #f7ac11;
+}
+.close_modal > h1:hover{
+    background-color: #e03d31;
+    cursor: pointer;
+    color: #fff;
+}
+body.modal-open{
+    overflow: hidden;
+}
+
+/* form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* Código que muestra la barra principal, la que contiene el logo de la empresa y la foto del usuario*/
+nav{
+    background-color: #002832;
+    height: 50px;
+    display: block;
+    justify-content: center;
+    align-items: start;
+    top: 0;
+    min-width: 100%;
+    z-index: 1
+}
+.contenedor{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+img{
+    width: 50px;
+    display: flex;
+}
+.perfil{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.perfil2{
+    background-color: #f7ac11;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    h1{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+}
+/* Aquí finaliza el código de la barra de perfil*/
+
+
+
+
+/* Este código contiene el buscador, el select de categorías y el boton de agregar*/
+ .filter{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.search{
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    display: flex;
+    margin-left: 3%;
+} 
+
+.icono{
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.buscando{
+    height: 30px;
+    width: 300px;
+    border-radius: 30px;
+    border: color(#002832);
+    padding-left: 10px;
+}
+.buscar:hover{
+    cursor: pointer;
+}
+.contenedor-add{
+    display: flex;
+    justify-content: end;
+}
+select{
+    width: 180px;
+    height: 30px;
+    border: none;
+}
+select:focus{
+    border-color: none;
+    outline: none;
+}
+.add{
+    display: flex;
+    justify-content: center;
+}
+.agregar{
+    width: 100px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002832;
+    color: #fff;
+    font-size: 15px;
+}
+.agregar:hover{
+    background-color: #005E76;
+    cursor: pointer;
+    border: none;
+}
+.icon{
+    filter: invert(100%);
+} 
+
+/* Aquí finaliza la sección que contiene el buscador, el select de categorías y el boton de agregar*/
+
+
+
+/* Este código contiene la tabla en la que se muestra la documentación de los procesos*/
+
+/* #tabla {
+    display: grid;
+    grid-template-columns: 50px 200px 1fr 150px 100px; 
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  thead{
+    width: 100%;
+  }
+  .titulo_tabla {
+    display: contents;
+  }
+  
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+
+  button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  } */
+/* .titulo_tabla{
+    display: contents;
+} 
+ #tabla thead, #tabla tbody {
+    display: contents; 
+}*/
+
+table, th{
+    border-collapse: collapse;
+    padding: .6rem;
+    text-align: center;
+    
+}
+
+td {
+    height: 10px; /* Fija la altura */
+    max-height: 10px; /* Límite máximo de altura */
+    overflow: hidden; /* Oculta el contenido excedente */
+    text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
+    white-space: nowrap; /* Evita saltos de línea */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 10px; /* Ajusta la altura de línea para evitar desbordes */
+    max-width: 150px;
+    padding: 5px;
+}
+
+
+main.table{
+    width: 100%;
+    height: 90%;
+}
+.table_body{
+        width: 95%;
+        max-height: calc(89% - .8rem);
+        background-color: #002832;
+        margin: .8rem auto;
+        border-radius: .6rem;
+        
+}
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #005E76;
+    visibility: hidden;
+}
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+
+}
+.titulo_tabla{
+    color: #fff;
+}
+
+table{
+    width: 100%;
+}
+tbody tr{
+    background-color: #fff;
+}
+tbody tr:nth-child(even){
+    background-color: #eeeef5;
+}
+tbody tr:hover{
+    background-color: #d0d3d3;
+    color: #000;
+    cursor: pointer;
+}
+
+/* @media (max-width: 1000px){
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+} */
+
+
+
+
+
+
+.login {
+    width: 80%; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+.login > h1{
+    text-align: center;
+    color: #002832;
+}
+.contenedor-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-login > img{
+    height: 300px;
+    width: 300px;
+}
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+}
+.formulario-login input,
+.formulario-login button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+}
+.formulario-login input{
+    background-color: #eeeeee;
+    border-radius: 8px;
+}
+.formulario-login button{
+    background-color: #002832;
+    border-radius: 8px;
+    color: #fff;
+}
+.formulario-login button:hover{
+    background-color: #f7ac11;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #000;
+}
+.botones{
+    width: 200px;
+}
+
+
+
+.editar-btn{
+    border-radius: 50%;
+}
+.eliminar-btn{
+    border-radius: 50%;
+}
+.eliminar-btn:hover{
+    cursor: pointer;
+    background-color: #e03d31;
+    
+}
+.editar-btn:hover{
+    cursor: pointer;
+    background-color: #f7ac11;
+}  
+
+
+.open_editar{
+    display: none;
+    justify-content: start;
+    align-items: self-end;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition-duration: 5s;
+    z-index: 10;
+    margin-top: 0;
+    background-color: #ffffffea;
+}
+.bcg_open_edit{
+    display: block;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    background-color: #fff;
+    width: 90%;
+    height: 100%;
+    opacity: 1;
+    position: relative;
+    border-radius: 20px 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 50px 1px #91cdc7;
+}
+.general_edit{
+    width: 60%;
+    height: 30px;
+    display: block;
+    margin: 10px  auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #d4dbddb2;
+    border: none;
+}
+.descripcion_edit{
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 10px  auto;
+}
+.formulario_edit{
+    padding: 20px;
+    background-color: #ffffff69;
+    width: 100%;
+    height: 90%;
+}
+.btn-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7ac11;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+}
+.btn_form:hover{
+    background-color: #002832;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 1px 1px 15px 3px #91cdc7;
+}
+.edit_register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #005E76;
+    text-align: center;
+    opacity: 1;
+    color: #fff;
+}
+.close_modal_edit{
+    background-color: #005E76;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 10%;
+    padding: 8px;
+}
+.close_modal_edit > h1{
+    background-color: #f7ac11;
+}
+.close_modal_edit > h1:hover{
+    background-color: #e03d31;
+    cursor: pointer;
+    color: #fff;
+}
+body.modal-open{
+    overflow: hidden;
+}
